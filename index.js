@@ -2,10 +2,8 @@
  * Problem Solving and DSA training in JavaScript
  */
 
-// Find the largest number in an array
-const array = [
-  1, 2, 4, 2, 2, 11111111111, 3, 4, 6, 8, 9, 7, 11, 223, 444, 1000,
-];
+// Q1. Find the largest number in an array
+const array = [2, 10, 4, 5, 6, 11];
 
 // Using normal for loop
 const getLargetNumberInArr = (arr) => {
@@ -35,3 +33,24 @@ const getLargestNumberUsingMap = (arr) => {
 
 // const largestNumber = getLargetNumberInArr(array); // Using normal for loop
 const largestNumber = getLargestNumberUsingMap(array); // using map function
+
+// Q2. Find the second largest number in an array ==>  TODO: Complete this next day
+const getSecondLargestNumber = (arr) => {
+  let largest = 0;
+  let secondLargest = 0;
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    if (arr[i] > largest) {
+      largest = arr[i];
+      secondLargest = largest;
+      console.log(largest);
+      console.log(secondLargest);
+    } else {
+      console.log("entered else");
+    }
+  }
+  return secondLargest;
+};
+
+const secondLargestNumber = getSecondLargestNumber(array);
+// console.log("secondLargestNumber", secondLargestNumber);
