@@ -34,7 +34,7 @@ const getLargestNumberUsingMap = (arr) => {
 // const largestNumber = getLargetNumberInArr(array); // Using normal for loop
 const largestNumber = getLargestNumberUsingMap(array); // using map function
 
-// Q2. Find the second largest number in an array ==>  TODO: Complete this next day
+// Q2. Find the second largest number in an array
 const getSecondLargestNumber = (arr) => {
   let largest = arr[0];
   let secondLargest = arr[0];
