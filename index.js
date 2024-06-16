@@ -3,7 +3,7 @@
  */
 
 // Q1. Find the largest number in an array
-const array = [2, 10, 4, 5, 6, 11];
+const array = [2, 10, 4, 5, 6, 11, 12, 13];
 
 // Using normal for loop
 const getLargetNumberInArr = (arr) => {
@@ -36,21 +36,18 @@ const largestNumber = getLargestNumberUsingMap(array); // using map function
 
 // Q2. Find the second largest number in an array ==>  TODO: Complete this next day
 const getSecondLargestNumber = (arr) => {
-  let largest = 0;
-  let secondLargest = 0;
+  let largest = arr[0];
+  let secondLargest = arr[0];
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
     if (arr[i] > largest) {
-      largest = arr[i];
       secondLargest = largest;
-      console.log(largest);
-      console.log(secondLargest);
-    } else {
-      console.log("entered else");
+      largest = arr[i];
+    } else if (arr[i] > secondLargest) {
+      secondLargest = arr[i];
     }
   }
   return secondLargest;
 };
 
 const secondLargestNumber = getSecondLargestNumber(array);
-// console.log("secondLargestNumber", secondLargestNumber);
+console.log("secondLargestNumber", secondLargestNumber);
